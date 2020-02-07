@@ -22,6 +22,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// DataBase 
+var mysql = require("mysql");
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "password",
+  database: "happybytes"
+});
+con.connect(function(err){
+  if(err){
+    console.log('Error connecting to Db');
+    return;
+  }
+  console.log('Connection established');
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

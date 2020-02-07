@@ -1,0 +1,30 @@
+extends layout
+
+    link(rel='stylesheet', href='/stylesheets/welcomeScreens.css')
+    link(rel='stylesheet', href='/stylesheets/lib/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/css/index.css')
+    script(src='/javascripts/lib/js/jquery.js')
+    script(src='/javascripts/lib/js/bootstrap.min.js')
+    script(src='/javascripts/js/index.js')
+    title HappyBytes Login
+  body.allContent
+    .logo
+      img(src='img/logo.png')
+    h3.text-center  Welcome To HappyBytes!
+    .loginInfo.text-center
+      form(action='login.html')
+        div
+          input#uNameInput.text(type='text', name='Username', placeholder='Username')
+        div
+          input#pWordInput.text(type='password', name='password', placeholder='Password')
+        #loginIssue.container
+    .text-center
+      button#loginBtn.btn.btn-outline-success Login
+    .text-center
+      a(href='signup.html')
+        button#signupBtn.btn.btn-outline-secondary.sign(type='button') Sign Up!
+    .container.description
+      p
+        | We give you 
+        q bytes
+        |  of information to help improve your day.This is an app to help you get through dark or troubling times. We will give you advice, inspirational messages, and resources to help you get through life.
